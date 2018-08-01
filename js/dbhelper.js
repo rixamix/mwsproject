@@ -1,6 +1,4 @@
-/**
- * Common database helper functions.
- */
+
 class DBHelper {
 
   /**

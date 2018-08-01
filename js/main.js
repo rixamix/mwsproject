@@ -4,6 +4,15 @@ let restaurants,
 var map
 var markers = []
 
+if('serviceWorker' in navigator){
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('/js/register.js').then(function(registration){
+      console.log('ServiceWorker registration successful in scope: ', registration.scope);
+    }, function(err){
+      console.log('ServiceWorker registration failed:', err);
+  });
+});
+}
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -141,7 +150,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  li.append(image);
+  li.append(image)
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;

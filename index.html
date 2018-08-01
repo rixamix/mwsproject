@@ -22,8 +22,6 @@
     </section>
     <label id="map-aria-description" class="map-aria-description"> Google maps app </label>
     <section>
-      <div class="filter-options">
-        <h2>Filter Results</h2>
         <div class = "filter-options">
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
@@ -33,18 +31,23 @@
           <option value="all">All Cuisines</option>
         </select>
         <label id="cuisines-label" class="filter-label"> by couisines </label>
+
       </div>
+      <h2>Filter Results</h2>
       <ul id="restaurants-list"></ul>
+
     </section>
+
+    <footer id="footer">
+      Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    </footer>
   </main>
 
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4pZjgO_Iy9xuNXxbN5lPyELTaDsrJ_eg&libraries=places&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlKTYRfzCifP3jxR7XboGGqiFJkQUchqM&libraries=places&callback=initMap"></script>
 
 </body>
-<footer id="footer">
-  Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
-</footer>
+
 
 </html>
